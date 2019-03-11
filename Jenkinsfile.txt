@@ -1,0 +1,15 @@
+pipeline{
+  agent{label 'java8'}
+  
+  stages{
+   
+      stage('Build'){
+	      steps{
+		    
+		     sh './gradlew clean assemble'
+		  }
+	  }
+    
+  }
+  
+}
